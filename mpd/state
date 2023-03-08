@@ -1,0 +1,28 @@
+sw_volume: 96
+audio_device_state:1:pulse audio
+audio_device_state:1:Visualizer feed
+state: pause
+current: 9
+time: 83.844000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Red Hot Chili Peppers/[1995] - One Hot Minute [Deluxe Edition]/02 - Aeroplane.mp3
+1:Red Hot Chili Peppers/[1999] - Californication [Deluxe Edition]/03 - Scar Tissue.mp3
+2:Red Hot Chili Peppers/[1999] - Californication [Deluxe Edition]/04 - Otherside.mp3
+3:Red Hot Chili Peppers/[1999] - Californication [Deluxe Edition]/06 - Californication.mp3
+4:Red Hot Chili Peppers/[2002] - By the Way [Deluxe Edition]/01 - By the Way.mp3
+5:Red Hot Chili Peppers/[2002] - By the Way [Deluxe Edition]/07 - Can't Stop.mp3
+6:Red Hot Chili Peppers/[2006] - Stadium Arcadium (2CDs)/CD1/01 - Dani California.mp3
+7:Red Hot Chili Peppers/[2006] - Stadium Arcadium (2CDs)/CD1/02 - Snow (Hey Oh).mp3
+8:Red Hot Chili Peppers/[2006] - Stadium Arcadium (2CDs)/CD2/02 - Tell Me Baby.mp3
+9:Red Hot Chili Peppers/[2011] - I'm With You/07 - The Adventures of Rain Dance Maggie.mp3
+10:Red Hot Chili Peppers/[2016] - 1 The Getaway/01 - The Getaway.mp3
+11:Red Hot Chili Peppers/[2016] - 1 The Getaway/02 - Dark Necessities.mp3
+12:Red Hot Chili Peppers/[1991] - Blood Sugar Sex Magik [Deluxe Edition]/11 - Under the Bridge.mp3
+playlist_end
