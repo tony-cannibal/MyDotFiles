@@ -3,7 +3,7 @@ zsh/plugins/powerlevel10k
 zsh/plugins/zsh-autosuggestions
 zsh/plugins/zsh-syntax-highlighting
 ranger/plugins/__pycache__/
-
+suckless/
 akonadi/
 pulse/
 khtml/
