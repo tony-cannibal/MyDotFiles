@@ -1,0 +1,10 @@
+dk
+dkcmd
+config.h
+src/config.h
+tags
+src/tags
+.cache
+compile_commands.json
+*.o
+*.bak
