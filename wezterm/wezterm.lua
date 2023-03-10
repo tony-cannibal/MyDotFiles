@@ -19,6 +19,7 @@ local colors = {
     "Green Screen (base16)",
     "Gruvbox dark, medium (base16)",
     "Everforest",
+    "Solarized Dark - Patched"
 }
 
 return {
@@ -27,9 +28,30 @@ return {
 	freetype_interpreter_version = 38,
 	-- freetype_load_flags = 'DEFAULT',
 	freetype_load_flags = "FORCE_AUTOHINT",
-	font = my_fonts[1],
+    freetype_load_target = "Normal", -- "HorizontalLcd", "Mono", "Light", "Normal"
+	font = my_fonts[2],
+    font_rules = {
+        {
+            intensity = 'Normal',
+            italic = true,
+            font = wezterm.font {
+                family = 'rissole',
+                weight = "Regular",
+                italic = false,
+            },
+        },
+        {
+            intensity = 'Bold',
+            italic = false,
+            font = wezterm.font {
+                family = 'rissole',
+                weight = 'Regular',
+                italic = false,
+            },
+        },
+    },
 	font_size = 8,
     color_scheme_dirs = { '/home/luis/.config/wezterm/colors/' },
-	color_scheme = colors[3],
+	color_scheme = colors[4],
     window_background_opacity = 0.8,
 }

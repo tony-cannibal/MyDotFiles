@@ -51,6 +51,7 @@ return packer.startup(function(use)
     use {'lewis6991/impatient.nvim'}
 
     use {'sainnhe/everforest'}
+    use { 'ishan9299/nvim-solarized-lua' }
 
     use {
       'VonHeikemen/lsp-zero.nvim',

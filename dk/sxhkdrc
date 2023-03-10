@@ -5,15 +5,13 @@
 super + p
 	dmenu_run
 
+# Power Menu
 super + x
     $HOME/.config/dk/scripts/dmenu-power.sh
 
-super + s
-    $HOME/.config/dk/scripts/scratch.sh
-
 # terminal
 super + shift + Return
-	st
+	wezterm
 
 # screenshot and selection capture
 {_,super + }@Print
@@ -21,7 +19,7 @@ super + shift + Return
 
 # dedicated volume keys
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
-	pamixer {-i,-d} 5
+	pamixer {-i,-d} 2
 
 # dedicated backlight keys
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
@@ -29,11 +27,13 @@ super + shift + Return
 
 # super volume keys
 super + {Insert,Delete}
-	pamixer {-i,-d} 5
+	pamixer {-i,-d} 2
 
 # reload sxhkd
 super + shift + x
 	pkill -USR1 -x sxhkd
+
+
 
 # quit dk
 super + shift + q
@@ -52,21 +52,11 @@ super + {j,k}
 	dkcmd win focus {next,prev}
 
 # close window, swap tiled window in/out of master, cycle tiled windows in place
-# super + {q,space,Tab}
-# 	dkcmd win {kill,swap,cycle}
+super + {q,space,Tab}
+	dkcmd win {kill,swap,cycle}
 
-super + space 
-    $HOME/.config/dk/scripts/change-layout.sh
-
-super + Tab
-    dkcmd win cycle
-
-super + Return
-    dkcmd win swap
-
-# close window
 super + shift + c
-	dkcmd win kill
+    dkcmd win kill
 
 # toggle fullscreen and fake fullscreen (enable manipulating fullscreen window)
 {_,super + }F11
@@ -97,16 +87,13 @@ super + {_,shift + ,ctrl + }{1-9,0}
 super + {_,shift + ,ctrl + }{bracketleft,bracketright,BackSpace,Left,Right}
 	dkcmd ws {view,send,follow} {prev,next,last,prevne,nextne}
 
-super + {comma, period}
-    dkcmd ws {prev,next}
-
 # view, send, or follow to the next, previous, or last active monitor
-# super + {_,shift + ,ctrl + }{comma,period,backslash}
-# 	dkcmd mon {view,send,follow} {prev,next,last}
+super + {_,shift + ,ctrl + }{comma,period,backslash}
+	dkcmd mon {view,send,follow} {prev,next,last}
 
 # change active workspace layout
-# super + {t,r,m,g,s,w,f,u}
-	# dkcmd set layout {tile,rtile,mono,grid,spiral,dwindle,none,tstack}
+super + {t,r,m,g,s,w,f,u}
+	dkcmd set layout {tile,rtile,mono,grid,spiral,dwindle,none,tstack}
 
 # change number of windows in master or first stack
 super + {_,shift + }{i,d}

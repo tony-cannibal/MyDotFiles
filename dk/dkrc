@@ -2,22 +2,10 @@
 
 # example dkrc to show some basic command usage and error reporting
 
-source $HOME/.cache/wal/bash.sh
-
 # determine where to place the log file
 logfile="$HOME/.dkrc.log"
 [ -d "$HOME/.local/share/xorg" ] && logfile="$HOME/.local/share/xorg/dkrc.log"
 : > "$logfile"
-
-
-
-
-# if hash lemonbar >/dev/null 2>&1; then
-# 	pkill lemonbar
-# 	$HOME/.config/dk/bar.sh 2>/dev/null &
-# fi
-
-$HOME/.config/dk/polybar/launch.sh
 
 xset s off -dpms
 
@@ -25,43 +13,22 @@ xset r rate 350 60
 
 setxkbmap -option caps:swapescape
 
-xset +fp /home/luis/.local/share/fonts
-xset +fp ~/.fonts/misc/
-xset +fp ~/.fonts/bitmap/
-xset fp rehash
-
-lxpolkit &
-
-udiskie &
-
-mpd &
-
 wmname LG3D
 
-feh --bg-fill ~/Pictures/Wallpapers/Neon\ Genesis/crimson-Evangeleon.png &
+feh --bg-fill ~/Pictures/Wallpapers/Solarized/solar_crane.png &
+
+$HOME/.config/dk/polybar/launch.sh
 
 # (re)load sxhkd for keybinds
 if hash sxhkd >/dev/null 2>&1; then
 	pkill sxhkd
 	sxhkd -c "$HOME/.config/dk/sxhkdrc" &
 fi
-picom --config $HOME/.config/dk/picom/picom.conf &
 
-# adjust border widths based on the DPI of the monitor
-px=$(xrandr | grep ' connected' | tail -n1 | grep -o '[0-9]\+x[0-9]\+' | cut -d'x' -f2)
-mm=$(xrandr | grep ' connected' | tail -n1 | grep -o '[0-9]\+mm' | tail -n1 | sed 's/mm//')
-dpi=$(( (px / mm) * 25 ))
+xset +fp ~/.fonts/misc/
 
-if [ $dpi -ge 140 ]; then
-	border_width=5
-	border_outer_width=3
-elif [ $dpi -ge 120 ]; then
-	border_width=4
-	border_outer_width=2
-else
-	border_width=4
-	border_outer_width=2
-fi
+border_width=4
+border_outer_width=2
 
 { # compound command to redirect all output
 
@@ -73,7 +40,7 @@ fi
 
 	# default workspace '_' values used when allocating new workspaces
 	# can be applied to all existing workspaces when passed 'apply' after ws=_
-	dkcmd set ws=_ apply layout=tile master=1 stack=0 gap=4 msplit=0.55 ssplit=0.5
+	dkcmd set ws=_ apply layout=tile master=1 stack=0 gap=6 msplit=0.5 ssplit=0.5
 
 	# use grid layout, padding, and gaps on workspace 10
 	dkcmd set ws=10 layout=grid pad left=200 right=200 top=100 bottom=100 gap=50
@@ -116,7 +83,7 @@ fi
 	# ---------------------
 
 	# focus windows when receiving activation and enable focus-follows-mouse
-	dkcmd set focus_open=true focus_urgent=true focus_mouse=false
+	dkcmd set focus_open=true focus_urgent=true focus_mouse=true
 
 	# place clients at the tail and ignore size hints on tiled windows
 	dkcmd set tile_tohead=0 tile_hints=false
@@ -143,12 +110,12 @@ fi
 	# outer_width must be less than width, outer_width of 0 will be single borders
 	dkcmd set border width=$border_width outer_width=$border_outer_width \
 		colour \
-		focus=$accent \
-		unfocus=$background \
-		urgent='#ee5555' \
-		outer_focus=$background \
-		outer_unfocus=$background \
-		outer_urgent=$background
+		focus='#2176c7' \
+		unfocus='#001e27' \
+		urgent='#d11c24' \
+		outer_focus='#222222' \
+		outer_unfocus='#222222' \
+		outer_urgent='#222222'
 
 
 	# window rules
@@ -177,16 +144,11 @@ fi
 	dkcmd rule class="^stickyterm$" stick=true float=true w=1280 h=720
 
 	# focus window and workspace on opening
-	dkcmd rule class="^firefox$" ws=2 focus=true
-	dkcmd rule class="^pcmanfm$" ws=3 focus=true
-	dkcmd rule class="^deluge$" ws=4 focus=true
-
-
-    dkcmd rule class="^scratchpad$" float=true x=center y=center w=1000 h=600
+	dkcmd rule class="^firefox$" ws=1 focus=true
 
 	# update or remove an existing rule with the same match patterns
-	# dkcmd rule class="^firefox$" mon="HDMI-A-0"
-	# dkcmd rule remove class="^Firefox$"
+	dkcmd rule class="^firefox$" mon="HDMI-A-0"
+	dkcmd rule remove class="^firefox$"
 
 	# apply current rule set to all existing windows (useful for WM reload/restart)
 	dkcmd rule apply '*'
@@ -202,6 +164,5 @@ if grep -q 'error:' "$logfile"; then
 		"$(awk '/error:/ {sub(/^error: /, ""); gsub(/</, "\<"); print}' "$logfile")"
 	exit 1
 fi
-
 
 exit 0

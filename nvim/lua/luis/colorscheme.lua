@@ -2,7 +2,7 @@ local color_chemes = {
     "gruvbox-material",  -- 1
     "everforest",        -- 2
     "sonokai",           -- 3
-    "solarized8",        -- 4
+    "solarized",        -- 4
     "komau",             -- 5
     "gruvbox",           -- 6
     "pywal",             -- 7
@@ -68,6 +68,6 @@ end
 -- 7 = pywal
 -- 8 = xresources
 
-ColorScheme(color_chemes[2], transparent)
+ColorScheme(color_chemes[4], transparent)
 
 

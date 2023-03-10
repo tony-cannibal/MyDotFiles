@@ -1,12 +1,12 @@
 #!/bin/bash
 
-source $HOME/.cache/wal/bash.sh
+
 
 function powermenu {
 
     options="Cancel\nShutdown\nReboot\nLogout"
 
-    selected=$(echo -e $options | dmenu -p "Power Menu" -fn "terminus-13" -nb $background -sb $accent )
+    selected=$(echo -e $options | dmenu -p "Power Menu" -fn "terminus-13" )
 
     if [[ $selected = "Shutdown" ]]; then
         systemctl poweroff
