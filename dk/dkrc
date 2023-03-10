@@ -19,6 +19,8 @@ feh --bg-fill ~/Pictures/Wallpapers/Solarized/solar_crane.png &
 
 $HOME/.config/dk/polybar/launch.sh
 
+mpd &
+
 # (re)load sxhkd for keybinds
 if hash sxhkd >/dev/null 2>&1; then
 	pkill sxhkd
@@ -113,8 +115,8 @@ border_outer_width=2
 		focus='#2176c7' \
 		unfocus='#001e27' \
 		urgent='#d11c24' \
-		outer_focus='#222222' \
-		outer_unfocus='#222222' \
+		outer_focus='#001e27' \
+		outer_unfocus='#001e27' \
 		outer_urgent='#222222'
 
 

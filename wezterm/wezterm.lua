@@ -1,19 +1,12 @@
 local wezterm = require("wezterm")
 
-local my_fonts = {
-    wezterm.font {
-        family = "JetBrainsMono Nerd Font",
-        weight = "Regular",
-        bold = false,
-        italic = false,
-    },
-    wezterm.font {
-        family = "rissole",
-        weight = "Regular",
-        bold = false,
-        italic = false,
-    },
+local fonts = {
+    "JetBrainsMono Nerd Font",
+    "rissole",
+    "Cozette",
 }
+
+local cfont = fonts[3]
 
 local colors = {
     "Green Screen (base16)",
@@ -29,13 +22,18 @@ return {
 	-- freetype_load_flags = 'DEFAULT',
 	freetype_load_flags = "FORCE_AUTOHINT",
     freetype_load_target = "Normal", -- "HorizontalLcd", "Mono", "Light", "Normal"
-	font = my_fonts[2],
+	font = wezterm.font {
+        family = cfont,
+        weight = "Regular",
+        bold = false,
+        italic = false,
+    },
     font_rules = {
         {
             intensity = 'Normal',
             italic = true,
             font = wezterm.font {
-                family = 'rissole',
+                family = cfont,
                 weight = "Regular",
                 italic = false,
             },
@@ -44,7 +42,7 @@ return {
             intensity = 'Bold',
             italic = false,
             font = wezterm.font {
-                family = 'rissole',
+                family = cfont,
                 weight = 'Regular',
                 italic = false,
             },
