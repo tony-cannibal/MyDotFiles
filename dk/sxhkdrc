@@ -3,11 +3,14 @@
 
 # launcher
 super + p
-	dmenu_run
+	$HOME/.config/dk/scripts/dmenu.sh
 
 # Power Menu
 super + x
     $HOME/.config/dk/scripts/dmenu-power.sh
+
+super + s
+    $HOME/.config/dk/scripts/scratch.sh
 
 # terminal
 super + shift + Return

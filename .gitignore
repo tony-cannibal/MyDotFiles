@@ -25,6 +25,12 @@ pcmanfm/
 xsettingsd/
 session/
 Unknown Organization/
+btop/
+vlc/
+
+dragonplayerrc
+drkonqirc
+mimeapps.list
 akonadi-firstrunrc
 akonadi-migrationrc
 akonadi-migrationrc.lock
@@ -82,3 +88,4 @@ systemsettingsrc
 user-dirs.dirs
 user-dirs.locale
 webengineurlinterceptoradblockrc
+

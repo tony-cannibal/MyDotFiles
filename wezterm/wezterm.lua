@@ -51,5 +51,5 @@ return {
 	font_size = 8,
     color_scheme_dirs = { '/home/luis/.config/wezterm/colors/' },
 	color_scheme = colors[4],
-    window_background_opacity = 0.8,
+    window_background_opacity = 0.9,
 }
