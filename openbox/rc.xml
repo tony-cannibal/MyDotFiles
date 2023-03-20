@@ -128,7 +128,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-  <number>4</number>
+  <number>6</number>
   <firstdesk>1</firstdesk>
   <names>
     <!-- set names up here if you want to, like this:
@@ -136,7 +136,7 @@
     <name>desktop 2</name>
     -->
   </names>
-  <popupTime>875</popupTime>
+  <popupTime>775</popupTime>
   <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
 </desktops>
@@ -217,17 +217,23 @@
   <keybind key="S-A-Down">
     <action name="SendToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="W-F1">
+  <keybind key="W-1">
     <action name="GoToDesktop"><to>1</to></action>
   </keybind>
-  <keybind key="W-F2">
+  <keybind key="W-2">
     <action name="GoToDesktop"><to>2</to></action>
   </keybind>
-  <keybind key="W-F3">
+  <keybind key="W-3">
     <action name="GoToDesktop"><to>3</to></action>
   </keybind>
-  <keybind key="W-F4">
+  <keybind key="W-4">
     <action name="GoToDesktop"><to>4</to></action>
+  </keybind>
+  <keybind key="W-5">
+    <action name="GoToDesktop"><to>5</to></action>
+  </keybind>
+  <keybind key="W-6">
+    <action name="GoToDesktop"><to>6</to></action>
   </keybind>
   <keybind key="W-d">
     <action name="ToggleShowDesktop"/>
@@ -299,13 +305,22 @@
   </keybind>
 
   <!-- Keybindings for running applications -->
-  <keybind key="W-e">
+  <keybind key="W-Return">
     <action name="Execute">
       <startupnotify>
         <enabled>true</enabled>
-        <name>Konqueror</name>
+        <name>alacritty</name>
       </startupnotify>
-      <command>kfmclient openProfile filemanagement</command>
+      <command>alacritty</command>
+    </action>
+  </keybind>
+  <keybind key="W-p">
+    <action name="Execute">
+      <startupnotify>
+        <enabled>true</enabled>
+        <name>rofi</name>
+      </startupnotify>
+      <command>rofi -show drun</command>
     </action>
   </keybind>
 </keyboard>

@@ -15,3 +15,22 @@
 # If you want to use XFCE config tools...
 #
 #xfce-mcs-manager &
+
+
+setxkbmap -option caps:swapescape
+
+xset s off -dpms
+
+xset r rate 350 60
+
+xset +fp ~/.fonts/misc/
+
+feh --bg-fill $HOME/Pictures/Wallpapers/Gruvbox/stairs.jpg &
+
+# $HOME/.config/openbox/polybar/launch.sh &
+
+lxsession &
+
+udiskie &
+
+mpd &

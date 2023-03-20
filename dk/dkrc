@@ -19,6 +19,10 @@ feh --bg-fill ~/Pictures/Wallpapers/Solarized/solar_crane.png &
 
 $HOME/.config/dk/polybar/launch.sh
 
+lxsession &
+
+udiskie &
+
 mpd &
 
 # (re)load sxhkd for keybinds
@@ -151,6 +155,7 @@ border_outer_width=2
 	dkcmd rule class="^firefox$" ws=2 focus=true
 	dkcmd rule class="^pcmanfm$" ws=3 focus=true
 	dkcmd rule class="^Deluge-gtk$" ws=4 focus=true
+	dkcmd rule class="^Deluge$" ws=4 focus=true
 
     dkcmd rule class="^scratchpad$" float=true x=center y=center w=1000 h=600
 

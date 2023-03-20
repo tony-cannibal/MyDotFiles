@@ -2,9 +2,9 @@ sw_volume: 96
 audio_device_state:1:pulse audio
 audio_device_state:1:Visualizer feed
 state: pause
-current: 2
-time: 140.041000
-random: 0
+current: 4
+time: 280.653000
+random: 1
 repeat: 0
 single: 0
 consume: 0
@@ -12,17 +12,38 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Red Hot Chili Peppers/[1995] - One Hot Minute [Deluxe Edition]/02 - Aeroplane.mp3
-1:Red Hot Chili Peppers/[1999] - Californication [Deluxe Edition]/03 - Scar Tissue.mp3
-2:Red Hot Chili Peppers/[1999] - Californication [Deluxe Edition]/04 - Otherside.mp3
-3:Red Hot Chili Peppers/[1999] - Californication [Deluxe Edition]/06 - Californication.mp3
-4:Red Hot Chili Peppers/[2002] - By the Way [Deluxe Edition]/01 - By the Way.mp3
-5:Red Hot Chili Peppers/[2002] - By the Way [Deluxe Edition]/07 - Can't Stop.mp3
-6:Red Hot Chili Peppers/[2006] - Stadium Arcadium (2CDs)/CD1/01 - Dani California.mp3
-7:Red Hot Chili Peppers/[2006] - Stadium Arcadium (2CDs)/CD1/02 - Snow (Hey Oh).mp3
-8:Red Hot Chili Peppers/[2006] - Stadium Arcadium (2CDs)/CD2/02 - Tell Me Baby.mp3
-9:Red Hot Chili Peppers/[2011] - I'm With You/07 - The Adventures of Rain Dance Maggie.mp3
-10:Red Hot Chili Peppers/[2016] - 1 The Getaway/01 - The Getaway.mp3
-11:Red Hot Chili Peppers/[2016] - 1 The Getaway/02 - Dark Necessities.mp3
-12:Red Hot Chili Peppers/[1991] - Blood Sugar Sex Magik [Deluxe Edition]/11 - Under the Bridge.mp3
+0:Deafheaven/Roads to Judah/01 Violet.mp3
+1:Deafheaven/Roads to Judah/02 Language Games.mp3
+2:Deafheaven/Roads to Judah/03 Unrequited.mp3
+3:Deafheaven/Roads to Judah/04 Tunnel of Trees.mp3
+4:Deafheaven/Sunbather/01 Dream House.mp3
+5:Deafheaven/Sunbather/02 Irresistible.mp3
+6:Deafheaven/Sunbather/03 Sunbather.mp3
+7:Deafheaven/Sunbather/04 Please Remember.mp3
+8:Deafheaven/Sunbather/05 Vertigo.mp3
+9:Deafheaven/Sunbather/06 Windows.mp3
+10:Deafheaven/Sunbather/07 The Pecan Tree.mp3
+11:Deafheaven/From the Kettle Onto the Coil/Deafheaven_-_From_the_Kettle_Onto_the_Coil.mp3
+12:Deafheaven/New Bermuda/01 - Bought to the Water.mp3
+13:Deafheaven/New Bermuda/02 - Luna.mp3
+14:Deafheaven/New Bermuda/03 - Baby Blue.mp3
+15:Deafheaven/New Bermuda/04 - Come Back.mp3
+16:Deafheaven/New Bermuda/05 - Gifts for the Earth.mp3
+17:Deafheaven/Ordinary Corrupt Human Love/01 You Without End.mp3
+18:Deafheaven/Ordinary Corrupt Human Love/02 Honeycomb.mp3
+19:Deafheaven/Ordinary Corrupt Human Love/03 Canary Yellow.mp3
+20:Deafheaven/Ordinary Corrupt Human Love/04 Near.mp3
+21:Deafheaven/Ordinary Corrupt Human Love/05 Glint.mp3
+22:Deafheaven/Ordinary Corrupt Human Love/06 Night People.mp3
+23:Deafheaven/Ordinary Corrupt Human Love/07 Worthless Animal.mp3
+24:Deafheaven/Black Brick/01 Black Brick.mp3
+25:Deafheaven/Infinite Granite/01 - Shellstar.mp3
+26:Deafheaven/Infinite Granite/02 - In Blur.mp3
+27:Deafheaven/Infinite Granite/03 - Great Mass of Color.mp3
+28:Deafheaven/Infinite Granite/04 - Neptune Raining Diamonds.mp3
+29:Deafheaven/Infinite Granite/05 - Lament for Wasps.mp3
+30:Deafheaven/Infinite Granite/06 - Villain.mp3
+31:Deafheaven/Infinite Granite/07 - The Gnashing.mp3
+32:Deafheaven/Infinite Granite/08 - Other Language.mp3
+33:Deafheaven/Infinite Granite/09 - Mombasa.mp3
 playlist_end

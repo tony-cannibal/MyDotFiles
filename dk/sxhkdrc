@@ -55,8 +55,8 @@ super + {j,k}
 	dkcmd win focus {next,prev}
 
 # close window, swap tiled window in/out of master, cycle tiled windows in place
-super + {q,space,Tab}
-	dkcmd win {kill,swap,cycle}
+super + {space,Tab}
+	dkcmd win {swap,cycle}
 
 super + shift + c
     dkcmd win kill
@@ -90,9 +90,12 @@ super + {_,shift + ,ctrl + }{1-9,0}
 super + {_,shift + ,ctrl + }{bracketleft,bracketright,BackSpace,Left,Right}
 	dkcmd ws {view,send,follow} {prev,next,last,prevne,nextne}
 
+super + {comma,period}
+    dkcmd ws {prev,next}
+
 # view, send, or follow to the next, previous, or last active monitor
-super + {_,shift + ,ctrl + }{comma,period,backslash}
-	dkcmd mon {view,send,follow} {prev,next,last}
+# super + {_,shift + ,ctrl + }{comma,period,backslash}
+# 	dkcmd mon {view,send,follow} {prev,next,last}
 
 # change active workspace layout
 super + {t,r,m,g,s,w,f,u}
