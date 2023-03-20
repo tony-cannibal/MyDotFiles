@@ -28,6 +28,10 @@ Unknown Organization/
 btop/
 vlc/
 inkscape/
+nvim/
+qtile/__pycache__/
+vim/
+bspwm/
 
 arkrc
 kgpgrc

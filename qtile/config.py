@@ -27,13 +27,13 @@
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
+# from libqtile.utils import guess_terminal
 import subprocess
 import os
 from colors import solarized_dark as colors
 
 mod = "mod4"
-terminal = "alacritty" 
+terminal = "wezterm"
 
 key_scripts = [
         '~/.config/rofi/scripts/launcher_t2'
@@ -47,20 +47,30 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod], "space", lazy.layout.next(),
+        desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
-    Key([mod, "shift"], "l", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([mod, "shift"], "h", lazy.layout.shuffle_right(), desc="Move window to the right"),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_down(), desc="Move window down"),
-    Key([mod, "shift"], "j", lazy.layout.shuffle_up(), desc="Move window up"),
+    Key([mod, "shift"], "l", lazy.layout.shuffle_left(),
+        desc="Move window to the left"),
+    Key([mod, "shift"], "h", lazy.layout.shuffle_right(),
+        desc="Move window to the right"),
+    Key([mod, "shift"], "k", lazy.layout.shuffle_down(),
+        desc="Move window down"),
+    Key([mod, "shift"], "j", lazy.layout.shuffle_up(),
+        desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
-    Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
-    Key([mod, "control"], "l", lazy.layout.grow_right(), desc="Grow window to the right"),
-    Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
-    Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    Key([mod, "control"], "h", lazy.layout.grow_left(),
+        desc="Grow window to the left"),
+    Key([mod, "control"], "l", lazy.layout.grow_right(),
+        desc="Grow window to the right"),
+    Key([mod, "control"], "j", lazy.layout.grow_down(),
+        desc="Grow window down"),
+    Key([mod, "control"], "k", lazy.layout.grow_up(),
+        desc="Grow window up"),
+    Key([mod], "n", lazy.layout.normalize(),
+        desc="Reset all window sizes"),
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
@@ -71,18 +81,25 @@ keys = [
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
-    Key([mod, "shift"], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod, "shift"], "Return", lazy.spawn(terminal),
+        desc="Launch terminal"),
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod], "Tab", lazy.next_layout(),
+        desc="Toggle between layouts"),
+    Key([mod, "shift"], "c", lazy.window.kill(),
+        desc="Kill focused window"),
+    Key([mod, "control"], "r", lazy.reload_config(),
+        desc="Reload the config"),
+    Key([mod, "control"], "q", lazy.shutdown(),
+        desc="Shutdown Qtile"),
 
-    Key([mod], "p", lazy.spawn(os.path.expanduser('~/.config/rofi/scripts/launcher_t2')), desc="rofi"),
+    Key([mod], "p", lazy.spawn(os.path.expanduser('~/.config/rofi/scripts/launcher_t2')),
+        desc="rofi"),
     Key([mod], "period", lazy.screen.next_group(), desc="Next Workspace"),
     Key([mod], "comma", lazy.screen.prev_group(), desc="Previous Workspace"),
     Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle Focused Floating"),
-    Key([mod], "x", lazy.spawn(os.path.expanduser("~/.config/rofi/scripts/powermenu_t2")), desc="Power Menu"),
+    Key([mod], "x", lazy.spawn(os.path.expanduser("~/.config/rofi/scripts/powermenu_t2")),
+        desc="Power Menu"),
     Key([mod], "kp_add", lazy.spawn("pamixer -i 5"), desc="Power Menu"),
     Key([mod], "kp_subtract", lazy.spawn("pamixer -d 5"), desc="Power Menu"),
 ]
@@ -103,6 +120,7 @@ groups = [__groups[i] for i in __groups]
 
 def get_group_key(name):
     return [k for k, g in __groups.items() if g.name == name][0]
+
 
 for i in groups:
     keys.extend(
@@ -254,11 +272,12 @@ wmname = "LG3D"
 
 startup = [
     'xset s off -dpms',
+    'xset r rate 350 60',
     'setxkbmap -option caps:swapescape',
     'numlockx &',
     'udiskie &',
     'lxpolkit &',
-    'feh --bg-fill ~/Pictures/wallpapers/Solarized/sentre.jpg',
+    'feh --bg-fill ~/Pictures/Wallpapers/Solarized/sentre.jpg &',
     'picom --config ~/.config/qtile/picom/picom.conf &',
     'mpd &'
 ]

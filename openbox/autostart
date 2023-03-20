@@ -27,9 +27,10 @@ xset +fp ~/.fonts/misc/
 
 feh --bg-fill $HOME/Pictures/Wallpapers/Gruvbox/stairs.jpg &
 
-# $HOME/.config/openbox/polybar/launch.sh &
-
 lxsession &
+
+$HOME/.config/openbox/polybar/launch.sh &
+
 
 udiskie &
 
