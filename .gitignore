@@ -36,7 +36,10 @@ GIMP/
 coc/
 tint2/
 gtk-2.0/
+balena-etcher/
+systemd/
 
+appimagelauncher.cfg
 okularrc
 arkrc
 kgpgrc
