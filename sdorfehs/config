@@ -1,0 +1,56 @@
+#!/bin/bash
+
+
+
+escape Super_L
+
+
+set ignoreresizehints 1
+set barinpadding 1
+set barpadding 5 5
+set onlyborder 1
+set bgcolor #000
+set fgcolor #00cc00
+set barcolor #000
+set barborder 2
+set barbordercolor #00cc00
+set border 2
+set fwcolor #00cc00
+set bwcolor #000
+set gap 14
+set padding 5 5 5 5
+set barsticky 1
+set bargravity ne
+set font "terminus-10"
+warp 0
+
+
+alias term exec wezterm
+
+alias desktop1 vselect 0
+alias desktop2 vselect 1
+alias desktop3 vselect 2
+alias desktop4 vselect 3
+alias desktop5 vselect 4
+alias desktop6 vselect 5
+alias desktop7 vselect 6
+alias desktop8 vselect 7
+alias desktop9 vselect 8
+
+
+bind Return term
+bind p exec dmenu_run
+
+definekey root s-1 desktop1
+definekey root s-2 desktop2
+definekey root s-3 desktop3
+definekey root s-4 desktop4
+definekey root s-5 desktop5
+definekey root s-6 desktop6
+definekey root s-7 desktop7
+definekey root s-8 desktop8
+definekey root s-9 desktop9
+
+exec $HOME/.config/sdorfehs/scripts/autostart.sh &
+exec $HOME/.config/sdorfehs/scripts/bar.sh &
+

@@ -4,6 +4,8 @@ local fonts = {
     "JetBrainsMono Nerd Font",
     "rissole",
     "Cozette",
+    "PxPlus IBM VGA 8x14",
+    "MorePerfectDOSVGA Nerd Font",
 }
 
 local cfont = fonts[3]
@@ -12,7 +14,8 @@ local colors = {
     "Green Screen (base16)",
     "Gruvbox dark, medium (base16)",
     "Everforest",
-    "Solarized Dark - Patched"
+    "Solarized Dark - Patched",
+    "Matrix (terminal.sexy)"
 }
 
 return {
@@ -21,11 +24,10 @@ return {
 	freetype_interpreter_version = 38,
 	-- freetype_load_flags = 'DEFAULT',
 	freetype_load_flags = "FORCE_AUTOHINT",
-    freetype_load_target = "Normal", -- "HorizontalLcd", "Mono", "Light", "Normal"
+    freetype_load_target = "Mono", -- "HorizontalLcd", "Mono", "Light", "Normal"
 	font = wezterm.font {
         family = cfont,
         weight = "Regular",
-        bold = false,
         italic = false,
     },
     font_rules = {
@@ -48,8 +50,8 @@ return {
             },
         },
     },
-	font_size = 8,
+	font_size = 10,
     color_scheme_dirs = { '/home/luis/.config/wezterm/colors/' },
-	color_scheme = colors[4],
+	color_scheme = colors[5],
     window_background_opacity = 0.9,
 }

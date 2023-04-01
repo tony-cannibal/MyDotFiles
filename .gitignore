@@ -32,7 +32,12 @@ nvim/
 qtile/__pycache__/
 vim/
 bspwm/
+GIMP/
+coc/
+tint2/
+gtk-2.0/
 
+okularrc
 arkrc
 kgpgrc
 dragonplayerrc

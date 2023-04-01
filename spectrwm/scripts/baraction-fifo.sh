@@ -44,5 +44,5 @@ while read -r line ; do
             ram="RAM:${line#?}"
 			;;
     esac
-    echo "[ ${vol} ] [ ${hdd} ] [ ${ram} ]"
+    echo "[ ${vol} ][ ${hdd} ][ ${ram} ]"
 done < "$PANEL_FIFO" &

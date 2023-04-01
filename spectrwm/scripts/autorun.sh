@@ -3,6 +3,9 @@
 # Disable Screen Sleep
 xset s off -dpms
 
+
+xset r rate 350 60
+
 # Swap Escape With CapsLock
 setxkbmap -option caps:swapescape
 

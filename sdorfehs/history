@@ -1,0 +1,20 @@
+exec wezterm
+exec firefox
+restart
+exec wezter
+exec wezterm
+exec firefox
+exec wezterm
+vselect 1
+vscreens
+vselect 1-1
+vselect 1
+exec wezterm
+restart
+exec firefox
+restart
+exec fire
+exec firefox
+restart
+vmove1
+vmove 1
