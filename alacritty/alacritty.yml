@@ -8,18 +8,18 @@ window:
 
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: terminus
     style: Regular
 
   bold:
-    family: JetBrainsMono Nerd Font
+    family: terminus
 
     style: Bold
 
   size: 8.0
 
 import:
-  - ~/.config/alacritty/themes/Everforest-Dark-Hard.yml
+  - ~/.config/alacritty/themes/Gruvbox-Dark.yml
 
 cursor:
   style:
