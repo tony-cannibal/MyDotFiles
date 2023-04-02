@@ -659,6 +659,17 @@
       </action>
     </keybind>
 
+
+    <keybind key="W-S-c">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="A-F6">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="W-d">
+      <action name="ToggleShowDesktop"/>
+    </keybind>
+
     <!-- Keybindings for running applications -->
     <keybind key="W-Return">
       <action name="Execute">
@@ -691,7 +702,7 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>rofi</name>
+          <name>reconfigure</name>
         </startupnotify>
         <command>openbox --reconfigure</command>
       </action>
