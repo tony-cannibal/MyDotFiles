@@ -1160,7 +1160,23 @@
     # 'Horizontal', 'Vertical' or boolean (yes/no)
   </application>
 
-  # end of the example
--->
+      # end of the example
+
+    -->
+    <application class="firefox">
+      <focus>yes</focus>
+      <desktop>2</desktop>
+      <maximized>true</maximized>
+    </application>  
+    <application class="Pcmanfm">
+      <focus>yes</focus>
+      <desktop>3</desktop>
+      <maximized>true</maximized>
+    </application>  
+    <application class="Deluge-gtk">
+      <focus>yes</focus>
+      <desktop>3</desktop>
+      <maximized>true</maximized>
+    </application>  
   </applications>
 </openbox_config>
