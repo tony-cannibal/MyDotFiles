@@ -31,7 +31,6 @@ lxpolkit &
 
 $HOME/.config/openbox/polybar/launch.sh &
 
-
 udiskie &
 
-#mpd &
+mpd &

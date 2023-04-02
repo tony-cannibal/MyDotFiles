@@ -678,6 +678,15 @@
         <command>/home/luis/.config/rofi/scripts/launcher_t2</command>
       </action>
     </keybind>
+    <keybind key="W-x">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>rofi</name>
+        </startupnotify>
+        <command>/home/luis/.config/rofi/scripts/powermenu_t2</command>
+      </action>
+    </keybind>
     <keybind key="W-S-r">
       <action name="Execute">
         <startupnotify>
