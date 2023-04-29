@@ -10,8 +10,8 @@ function zsh_add_plugin() {
         # For plugins
         zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh" || \
         zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.zsh"
-    # else
-    #     git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
+    else
+        git clone "https://github.com/zsh-users/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
     fi
 }
 

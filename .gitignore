@@ -38,6 +38,8 @@ tint2/
 gtk-2.0/
 balena-etcher/
 systemd/
+nvim.old/
+nvim.old2/
 
 appimagelauncher.cfg
 okularrc
