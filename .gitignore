@@ -40,7 +40,9 @@ balena-etcher/
 systemd/
 nvim.old/
 nvim.old2/
+qBittorrent/
 
+QtProject.conf
 appimagelauncher.cfg
 okularrc
 arkrc
